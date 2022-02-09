@@ -2,7 +2,7 @@
 
 export CNAME=springboot-app
 
-if [ "$(docker ps -q -f name=$CNAME)" ]; then
+if [ "$(docker ps -aq -f name=$CNAME)" ]; then
 echo "Removing the container:$CNAME"
 docker rm -f $CNAME;
 fi
